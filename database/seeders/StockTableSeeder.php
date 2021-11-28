@@ -3,18 +3,17 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Stock;
 
-class DatabaseSeeder extends Seeder
+class StockTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call([
-            StockTableSeeder::class,
-        ]);
+        Stock::factory()->count(500)->create();
     }
 }
