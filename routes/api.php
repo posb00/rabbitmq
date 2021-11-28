@@ -2,7 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\StockController;
+use App\Http\Controllers\LogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,14 +17,13 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-Route::middleware('auth:sanctum')->get('/stock', function (Request $request) {
-    return $request->user();
-});
-Route::middleware('auth:sanctum')->get('/history', function (Request $request) {
-    return $request->user();
+//Middleware auth group for stocks and logs endpoints
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('stocks',[StockController::class]);
+    Route::get('logs',[LogController::class]);
 });
 
-Route::post('/register',[AuthController::class,'register']);
+
+//Register Route
+Route::post('/register',[RegisterController::class,'register']);
