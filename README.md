@@ -28,3 +28,7 @@ You have to run all this scripts in order.
 - you can check the email send in http://localhost:8025/#
 
 
+## UNIT TEST
+- you can run the test doing sail test
+
+
