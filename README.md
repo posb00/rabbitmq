@@ -2,7 +2,8 @@
 
 ## Description
 
-This is a laravel project for jobsity test, the project has JWT, RabbitMQ, Unit Test and docker.
+This is a laravel project for jobsity test, the project has JWT, RabbitMQ, Unit Test and docker. 
+You have to run all this scripts in order.
 
 - Clone the repository.
 - Create an .env file and copy all the data from .env.example and paste it into the .env file
