@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\StockController;
-use App\Http\Controllers\LogController;
+use App\Http\Controllers\HistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +20,8 @@ use App\Http\Controllers\LogController;
 //Middleware auth group for stocks and logs endpoints
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('stocks',[StockController::class]);
-    Route::get('logs',[LogController::class]);
+    Route::get('stock/',[StockController::class,'getStock']);
+    Route::get('history',[HistoryController::class, 'history']);
 });
 
 
