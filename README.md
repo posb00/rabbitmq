@@ -27,6 +27,18 @@ You have to run all this scripts in order.
 - the history endpoint  http://0.0.0.0/api/history
 - you can check the email send in http://localhost:8025/#
 
+## POSTMAN TEST
+-you need to pass in postman headers a key value pair to all the request
+"accept" : "application/json"
+
+-the payload for the registration endpoint is
+{
+    "name": "alexander",
+    "email": "posb00@gmail.com",
+    "password":"123456",
+    "password_confirmation":"123456"
+}
+
 
 ## UNIT TEST
 - you can run the test doing sail test
